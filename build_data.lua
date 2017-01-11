@@ -77,6 +77,17 @@ local toolchain_list =
     cross_lua = 'float 64',
     cross_lualong = 'int 32',
     version = '--version'
+  },
+  [ 'linux-gcc' ] = {
+    compile = 'gcc',
+    link = 'ld',
+    asm = 'nasm',
+    bin = 'objcopy',
+    size = 'size',
+    cross_cpumode = 'little',
+    cross_lua = 'float 64',
+    cross_lualong = 'int 32',
+    version = '--version'
   }
 }
 
@@ -96,7 +107,8 @@ local toolchain_map = {
   arm = { 'arm-gcc', 'codesourcery', 'devkitarm', 'arm-eabi-gcc' },
   cortexm = { 'arm-gcc', 'codesourcery', 'devkitarm', 'arm-eabi-gcc' },
   avr32 = { 'avr32-gcc', 'avr32-unknown-none-gcc' },
-  i386 =  { 'i686-gcc' }
+  i386 =  { 'i686-gcc' },
+  linux = { 'linux-gcc' }
 }
 
 -- List of platform/CPU combinations
@@ -107,6 +119,7 @@ local platform_list =
   str9 = { cpus = { 'STR912FAW44' }, arch = 'arm' },
   i386 = { cpus = { 'I386' }, arch = 'i386' },
   sim = { cpus = { 'LINUX' }, arch = 'i386' },
+  simlinux = { cpus = { 'LINUX' }, arch = 'linux' },
   lpc288x = { cpus = { 'LPC2888' }, arch = 'arm' },
   str7 = { cpus = { 'STR711FR2' }, arch = 'arm' },
   stm32f2 = { cpus = { 'STM32F205RF' }, arch = 'cortexm' },
