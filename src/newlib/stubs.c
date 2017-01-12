@@ -388,6 +388,11 @@ int _kill( int pid, int sig )
 }
 #endif
 
+int kill( int pid, int sig )
+{
+  return -1;
+}
+
 // If LUA_NUMBER_INTEGRAL is defined, "redirect" printf/scanf calls to their 
 // integer counterparts
 #ifdef LUA_NUMBER_INTEGRAL

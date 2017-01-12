@@ -199,7 +199,7 @@ if bdata.build then
 end
 -- Automatically set the allocator to 'multiple' if needed
 if bdata.multi_alloc and comp.allocator == "newlib" then
-  io.write( utils.col_yellow( "[CONFIG] WARNING: your board has non-contigous RAM areas, but you specified an allocator ('newlib') that can't handle this configuration." ) )
+  io.write( utils.col_yellow( "[CONFIG] WARNING: your board has non-contiguous RAM areas, but you specified an allocator ('newlib') that can't handle this configuration." ) )
   print( utils.col_yellow( "Rebuild with another allocator ('multiple' or 'simple')" ) )
 end
 if comp.allocator == "auto" then comp.allocator = bdata.multi_alloc and "multiple" or "newlib" end

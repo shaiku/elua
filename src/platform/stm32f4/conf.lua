@@ -23,9 +23,11 @@ addm( { "FOR" .. cnorm( comp.cpu ), "FOR" .. cnorm( comp.board ), 'gcc', 'USE_ST
 
 -- Standard GCC Flags
 --delcf( { '-Os' } )
---addcf( { '-O0' } )
+--addcf( { '-O1' } )
 addcf( { '-g' } )
-addcf( { '-ffunction-sections', '-fdata-sections', '-fno-strict-aliasing', '-Wall' } )
+addcf( { '-ffunction-sections' } )
+--addcf( { '-fdata-sections' } )
+addcf( { '-fno-strict-aliasing', '-Wall' } )
 addlf( { '-nostartfiles','-nostdlib', '-T', ldscript, '-Wl,--gc-sections', '-Wl,--allow-multiple-definition', sf( "-Wl,-Map=%s.map", output ) } )
 addaf( { '-x', 'assembler-with-cpp', '-c', '-Wall' } )
 addlib( { 'c','gcc','m' } )
