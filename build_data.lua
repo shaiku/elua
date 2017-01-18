@@ -116,6 +116,7 @@ local platform_list =
   lpc23xx = { cpus = { 'LPC2368' }, arch = 'arm' },
   lpc24xx = { cpus = { 'LPC2468' }, arch = 'arm' },
   lpc17xx = { cpus = { 'LPC1768', 'LPC1769' }, arch = 'cortexm' },
+  lpc43xx = { cpus = { 'LPC4367JET100' }, arch = 'cortexm' },
   xmc4000 = { cpus = { 'XMC4500F144K1024', 'XMC4500E144K1024', 'XMC4700F144K2048' }, arch = 'cortexm' },
 }
 
