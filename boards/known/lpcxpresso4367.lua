@@ -4,7 +4,7 @@ return {
   cpu = 'lpc4367jet100',
   components = {
     --sercon = { uart = "cdc", speed = 115200 },
-	sercon = { uart = "1", speed = 115200 },
+	sercon = { uart = "0", speed = 115200 },
     romfs = true,
     shell = true,
     --cdc = true,
